@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap layout</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <style>
+        *{
+            scroll-behavior: smooth;
+        }
+
+        section {
+            width: 100%;
+            height: 350px;
+        }
+
+        .parallax {
+            background-image: url("img/reindeer-2.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        section .line-height {
+            line-height: 350px;
+        }
+
+        #GoToTop {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(49, 49, 49, 0.3);
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            background-image: url("img/top.png");
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.jpg" alt="" class="w-50">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#wildlife">Wildlife</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cuisine">Cuisine</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- slider -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/Norway-banner1.jpg" class="d-block w-100" alt="Norway landscape">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/Norway-banner2.jpg" class="d-block w-100" alt="Norway landscape">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/Norway-banner3.jpg" class="d-block w-100 " alt="Norway landscape">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- 互動視窗 -->
+        <div id="wildlife" class="container d-flex justify-content-center flex-wrap">
+            <div class="row mt-5">
+                <div class="col-lg col-sm-12 mb-sm-3 d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/dogs.jpg" class="card-img-top" alt="Sled dog">
+                        <div class="card-body">
+                            <h5 class="card-title">Sled Dog</h5>
+                            <p class="card-text">Sled dogs are used in Canada, Lapland, Greenland, Siberia, Chukotka,
+                                Norway, Sweden, Finland, and Alaska.</p>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModalCenter">
+                                Read More
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Sled Dog</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Alaskan husky is the most commonly used dog in dog sled racing. It is a
+                                            blend of different kinds of Northern breeds and is not considered a pure
+                                            breed.<br>
+                                            The Huskies are strong dogs, and they are at their happiest when work is
+                                            hard and the temperature is low.<br>
+                                            In other words, huskies are the perfect choice as companions when you steer
+                                            your sled through the wild and picturesque wilderness.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save to favourite</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-sm-12 mb-sm-3 d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/Moose.jpg" class="card-img-top" alt="Moose">
+                        <div class="card-body">
+                            <h5 class="card-title">Moose</h5>
+                            <p class="card-text">Moose are currently found in large numbers throughout Norway, Sweden,
+                                Finland, Latvia, Estonia, Poland.</p>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModalCenter2">
+                                Read More
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Moose</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Two of the most easily found animal species in Norway are elk and reindeer.
+                                            Despite the Norwegian’s appetite for moose burgers, they are still common in
+                                            the southern and central regions, whilst reindeer can be seen more
+                                            frequently further north - obviously, that’s where Santa is.
+                                            Although called 'Elg' in Norwegian, the moose found in Norway (Alces alces)
+                                            is a different species than the American elk. They are the largest land
+                                            animals found in Norway. With antlers that can span up to 1,5 meters, they
+                                            can reach a shoulder height of a stunning 2,3 meters.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save to favourite</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-sm-12 mb-sm-3 d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/Reindeer.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Reindeer</h5>
+                            <p class="card-text">In Norway, it is called fjellrein, villrein or tundra-rein.</p>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModalCenter3">
+                                Read More
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Reindeer</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Mountain reindeer are medium to large even-toed ungulates with a thick
+                                            double coat that protects them from the Norwegian winter. Male reindeer
+                                            (bulls) weigh on average 70 to 150 kg (154 to 331 pounds), while females
+                                            (cows) weigh on average 40 to 100 kg (88 to 220 pounds). Both bulls and cows
+                                            have antlers, but cows do not use them to battle one another; instead, like
+                                            some bovids, they use their antlers to defend food or territory from
+                                            intruders. Their summer coat is mostly pale brown with white rumps and, in
+                                            some genetic variations, black legs and creamy-white necks. Their winter
+                                            coat can be cream-white with beige shoulders and backs, or completely
+                                            cream-white.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save to favourite</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- parallax -->
+        <section class="parallax">
+            <div class="container-fluid">
+                <h4 class="text-center text-truncate line-height">Reindeer are diurnal animals that live in herds.</h4>
+            </div>
+        </section>
+
+        <!-- 標題 -->
+        <div id="cuisine" class="container mt-5 mb-5">
+            <h1 class="text-center">Norway Traditional Cuisine</h1>
+        </div>
+
+        <!-- 圖文區 -->
+        <div class="container mb-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-lg col-sm-12 mb-sm-3">
+                    <img src="img/traditional_norwegian_food_pinnekjott.jpg" alt="" class="w-100">
+                </div>
+                <div class="col-lg col-sm-12">
+                    <p>Pinnekjøtt is a traditional Norwegian main course dinner dish based on lamb ribs. Pinnekjøtt is a
+                        festive dish typical to Western and Northern Norway, and is rapidly gaining popularity in other
+                        regions as well. This dish is largely associated with the celebration of Christmas and
+                        frequently paired with puréed rutabaga, sausages and potatoes, served beer and akevitt</p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-lg order-lg-1 col-sm-12 mt-sm-3 mb-sm-3">
+                    <img src="img/multekrem.jpg" alt="" class="w-100">
+                </div>
+                <div class="col-lg col-sm-12">
+                    <p>Multekrem is a traditional Norwegian dessert, made by mixing cloudberries with whipped cream and
+                        sugar. The cloudberries can be served as-is or heated. It is common to serve the Multekrem with
+                        Krumkake or Kransekake. Multekrem is also a traditional Norwegian Christmas dinner dessert.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <a href="#"><div id="GoToTop" class="rounded-circle"></div></a>
+        <div class="container-fluid bg-dark text-light text-center p-2">Ⓒ僅做學術練習使用</div>
+    </main>
+
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
