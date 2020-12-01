@@ -1,4 +1,2 @@
-# bootstrap.github.io
-Bootstrap Practice
-
-home page url  https://tinzuu05.github.io/bootstrap.github.io/.
+Visit Norway Travel website via link - https://tinzuu05.github.io/norway_travel.github.io/ please,
+thank you.
